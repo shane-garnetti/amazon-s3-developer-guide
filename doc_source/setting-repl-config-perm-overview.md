@@ -73,8 +73,17 @@ This section explains the trust policy and minimum required permissions policy\.
               "s3:ReplicateDelete",
               "s3:ReplicateTags"
            ],
-           "Resource":"arn:aws:s3:::DestinationBucket/*",
+           "Resource":"arn:aws:s3:::DestinationBucket/*"
+        },
+        {
+           "Effect":"Allow",
+           "Action":[
+              "s3:ReplicateObject",
+              "s3:ReplicateDelete",
+              "s3:ReplicateTags"
+           ],
            "Resource":"arn:aws:s3:::DestinationBucket-2/*"
+           
         }
      ]
   }
